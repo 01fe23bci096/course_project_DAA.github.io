@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Design and Analysis of Algorithms</title>
     <link rel="stylesheet" href="style.css">
+    <script>
+        // JavaScript to toggle visibility of sections
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.style.display = section.style.display === "none" ? "block" : "none";
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -13,62 +20,103 @@
     </header>
 
     <main>
-        <section id="introduction">
-            <h2>Home Page - Introduction</h2>
-            <ul>
-                <li><strong>What is the course about?</strong><br> 
-                    The course focuses on understanding the principles of algorithm design and analysis, exploring strategies for solving computational problems efficiently.
-                </li>
-                <li><strong>What kind of data structures and algorithms have you studied?</strong><br> 
-                    We have studied arrays, linked lists, trees, graphs, sorting, and searching algorithms.
-                </li>
-                <li><strong>How do you connect the course with real-life applications?</strong><br> 
-                    Algorithms like shortest path and graph traversal are used in GPS navigation, while sorting is vital in database management systems.
-                </li>
-            </ul>
+        <!-- Introduction Section -->
+        <section>
+            <button onclick="toggleSection('introduction')">Toggle Introduction</button>
+            <div id="introduction" style="display: none;">
+                <h2>Home Page - Introduction</h2>
+                <ul>
+                    <li>
+                        <b>What is the course about?</b>
+                        <p>The course provides an in-depth understanding of algorithms, focusing on their design, analysis, and real-world applications. It emphasizes problem-solving techniques to tackle computational challenges efficiently.</p>
+                    </li>
+                    <li>
+                        <b>What kind of data structures and algorithms have you studied?</b>
+                        <p>We explored arrays, linked lists, stacks, queues, trees, graphs, and their associated algorithms. Additionally, advanced topics like dynamic programming and greedy algorithms were discussed.</p>
+                    </li>
+                    <li>
+                        <b>How do you connect the course with real-life applications?</b>
+                        <p>Algorithms are used in navigation systems, search engines, and data security. For example, shortest path algorithms are integral to GPS systems, and sorting algorithms power search engines for efficient data retrieval.</p>
+                    </li>
+                </ul>
+            </div>
         </section>
 
-        <section id="project-intro">
-            <h2>Course Project Introduction</h2>
-            <ul>
-                <li><strong>Details of the problem space:</strong><br> 
-                    The project addresses urban traffic management by designing an optimized route allocation system based on graph algorithms.
-                </li>
-                <li><strong>Problem definition:</strong><br> 
-                    How to minimize traffic congestion using data from road networks, intersections, and traffic signals.
-                </li>
-                <li><strong>Business cases:</strong><br> 
-                    Member A works on data collection, Member B focuses on algorithm implementation, and Member C on visualization.
-                </li>
-            </ul>
+        <!-- Course Project Section -->
+        <section>
+            <button onclick="toggleSection('project-intro')">Toggle Course Project Introduction</button>
+            <div id="project-intro" style="display: none;">
+                <h2>Course Project Introduction</h2>
+                <ul>
+                    <li>
+                        <b>Problem Space:</b>
+                        <p>The project focuses on urban traffic optimization using graph algorithms. The team identified congestion points and inefficiencies in current traffic systems to define the problem space.</p>
+                    </li>
+                    <li>
+                        <b>Problem Definition:</b>
+                        <p>To minimize travel time and congestion by designing efficient routing strategies using shortest path algorithms, such as Dijkstra's and A*.</p>
+                    </li>
+                    <li>
+                        <b>Business Cases:</b>
+                        <p>Each team member tackles a specific problem:
+                            <ul>
+                                <li>Member A: Implementing traffic prediction using historical data.</li>
+                                <li>Member B: Developing real-time pathfinding algorithms.</li>
+                                <li>Member C: Simulating the impact of optimized routes on urban traffic.</li>
+                            </ul>
+                        </p>
+                    </li>
+                </ul>
+            </div>
         </section>
 
-        <section id="learning-reflections">
-            <h2>Course Learning Reflections</h2>
-            <ul>
-                <li><strong>What are the kinds of problems we see in nature?</strong><br>
-                    Problems such as finding optimal paths, predicting outcomes (recursion), and solving puzzles (backtracking).
-                </li>
-                <li><strong>What is space and time efficiency?</strong><br>
-                    Space efficiency refers to minimizing memory usage, while time efficiency measures how quickly an algorithm runs. Both are crucial in real-time systems.
-                </li>
-                <li><strong>Key takeaways from Chapter 2:</strong><br>
-                    Focus on modularity, simplicity, and understanding trade-offs between performance and implementation complexity.
-                </li>
-                <li><strong>Hierarchical data and trees:</strong><br>
-                    Structures like AVL and Red-Black trees balance data, enabling faster search, insert, and delete operations.
-                </li>
-                <li><strong>Array query algorithms:</strong><br>
-                    Algorithms like binary search enable faster query responses in sorted arrays, essential for large databases.
-                </li>
-                <li><strong>Tree vs. graph traversals:</strong><br>
-                    Trees are hierarchical and graphs handle complex networks, e.g., DFS in graphs for maze solving.
-                </li>
-                <li><strong>Sorting and searching algorithms:</strong><br>
-                    Techniques like Merge Sort ensure stable sorting, and their applications span e-commerce and analytics.
-                </li>
-            </ul>
+        <!-- Learning Reflections Section -->
+        <section>
+            <button onclick="toggleSection('learning-reflections')">Toggle Learning Reflections</button>
+            <div id="learning-reflections" style="display: none;">
+                <h2>Course Learning Reflections</h2>
+                <ul>
+                    <li>
+                        <b>Kinds of Problems:</b>
+                        <p>We analyzed various problem types, such as iteration (e.g., factorial calculation), recursion (e.g., Fibonacci series), and backtracking (e.g., N-Queens problem), and their role in solving real-world challenges.</p>
+                    </li>
+                    <li>
+                        <b>Space and Time Efficiency:</b>
+                        <p>These metrics are critical in algorithm design. For example, binary search significantly reduces time complexity compared to linear search. Space optimization is vital in embedded systems where resources are limited.</p>
+                    </li>
+                    <li>
+                        <b>Design Principles:</b>
+                        <p>Chapter 2 emphasized modularity, reusability, and scalability in algorithm design. Divide-and-conquer methods like merge sort and quicksort were explored in detail.</p>
+                    </li>
+                </ul>
+            </div>
         </section>
 
-        <section id="questions">
-            <
+        <!-- Discussion Questions Section -->
+        <section>
+            <button onclick="toggleSection('questions')">Toggle Discussion Questions</button>
+            <div id="questions" style="display: none;">
+                <h2>Discussion Questions</h2>
+                <ul>
+                    <li>
+                        <b>How do you determine the most efficient approach?</b>
+                        <p>By comparing different algorithms for their time and space complexities, and choosing one that best fits the constraints of the problem.</p>
+                    </li>
+                    <li>
+                        <b>What criteria do you use to evaluate solutions?</b>
+                        <p>The solution's scalability, maintainability, and performance in edge cases are crucial evaluation criteria.</p>
+                    </li>
+                    <li>
+                        <b>How do you adapt solutions for new challenges?</b>
+                        <p>We focus on modularity and abstraction in code to make it easier to adapt solutions for unforeseen problems. For example, reusing graph traversal algorithms for network analysis.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2024 Design and Analysis of Algorithms. All rights reserved.</p>
+    </footer>
+</body>
+</html>
