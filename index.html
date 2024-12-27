@@ -12,6 +12,77 @@
             section.style.display = section.style.display === "none" ? "block" : "none";
         }
     </script>
+    <style>
+        /* Basic styling for the layout */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fa; /* Soft background color */
+            color: #333; /* Dark text for readability */
+        }
+        header {
+            background-color: #2c3e50; /* Dark blue-gray */
+            color: #ecf0f1; /* Light text color */
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        h2 {
+            font-size: 1.6em;
+            margin: 10px 0;
+            font-weight: normal;
+        }
+        main {
+            padding: 20px;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+        button {
+            background-color: #3498db; /* Soft blue button */
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #2980b9; /* Slightly darker blue on hover */
+        }
+        div {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 10px;
+        }
+        footer {
+            text-align: center;
+            background-color: #2c3e50; /* Matching footer with header */
+            color: #ecf0f1;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        b {
+            color: #34495e; /* Darker color for text emphasis */
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -20,31 +91,28 @@
     </header>
 
     <main>
-        <!-- Introduction Section -->
+        <!-- Introduction Section - Always visible -->
         <section>
-            <button onclick="toggleSection('introduction')">Toggle Introduction</button>
-            <div id="introduction" style="display: none;">
-                <h2>Home Page - Introduction</h2>
-                <ul>
-                    <li>
-                        <b>What is the course about?</b>
-                        <p>The course provides an in-depth understanding of algorithms, focusing on their design, analysis, and real-world applications. It emphasizes problem-solving techniques to tackle computational challenges efficiently.</p>
-                    </li>
-                    <li>
-                        <b>What kind of data structures and algorithms have you studied?</b>
-                        <p>We explored arrays, linked lists, stacks, queues, trees, graphs, and their associated algorithms. Additionally, advanced topics like dynamic programming and greedy algorithms were discussed.</p>
-                    </li>
-                    <li>
-                        <b>How do you connect the course with real-life applications?</b>
-                        <p>Algorithms are used in navigation systems, search engines, and data security. For example, shortest path algorithms are integral to GPS systems, and sorting algorithms power search engines for efficient data retrieval.</p>
-                    </li>
-                </ul>
-            </div>
+            <h2>Introduction</h2> <!-- Added the Introduction header -->
+            <ul>
+                <li>
+                    <b>What is the course about?</b>
+                    <p>The course provides an in-depth understanding of algorithms, focusing on their design, analysis, and real-world applications. It emphasizes problem-solving techniques to tackle computational challenges efficiently.</p>
+                </li>
+                <li>
+                    <b>What kind of data structures and algorithms have you studied?</b>
+                    <p>We explored arrays, linked lists, stacks, queues, trees, graphs, and their associated algorithms. Additionally, advanced topics like dynamic programming and greedy algorithms were discussed.</p>
+                </li>
+                <li>
+                    <b>How do you connect the course with real-life applications?</b>
+                    <p>Algorithms are used in navigation systems, search engines, and data security. For example, shortest path algorithms are integral to GPS systems, and sorting algorithms power search engines for efficient data retrieval.</p>
+                </li>
+            </ul>
         </section>
 
         <!-- Course Project Section -->
         <section>
-            <button onclick="toggleSection('project-intro')">Toggle Course Project Introduction</button>
+            <button onclick="toggleSection('project-intro')">Course Project Introduction</button>
             <div id="project-intro" style="display: none;">
                 <h2>Course Project Introduction</h2>
                 <ul>
@@ -72,7 +140,7 @@
 
         <!-- Learning Reflections Section -->
         <section>
-            <button onclick="toggleSection('learning-reflections')">Toggle Learning Reflections</button>
+            <button onclick="toggleSection('learning-reflections')">Course Learning Reflections</button>
             <div id="learning-reflections" style="display: none;">
                 <h2>Course Learning Reflections</h2>
                 <ul>
@@ -94,7 +162,7 @@
 
         <!-- Discussion Questions Section -->
         <section>
-            <button onclick="toggleSection('questions')">Toggle Discussion Questions</button>
+            <button onclick="toggleSection('questions')">Discussion Questions</button>
             <div id="questions" style="display: none;">
                 <h2>Discussion Questions</h2>
                 <ul>
